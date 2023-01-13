@@ -1,7 +1,7 @@
 body {
     background-color: #141414;
     font-family: NetflixSans;
-    animation: fadein 1s;
+    animation: fadein 1.5s;
     animation-fill-mode: both;
     box-sizing: border-box;
     color: white;
@@ -40,6 +40,7 @@ body {
   i {
     color: white;
     font-weight: bolder;
+    cursor: pointer;
   }
 
   .carousel-control-next, .carousel-control-prev {
@@ -49,9 +50,6 @@ body {
   
 
 
-#myCarousel {
-    margin-top: 50px;
-}
 
 @media (max-width: 768px) {
     .carousel-inner .carousel-item>div {
@@ -117,21 +115,30 @@ body {
 
 
 .infos-container {
-  background: #292727;
+
   display: none;
 }
-
 
 .carousel-hover {
   transition: 0.5s ease-in-out;
 }
+#myCarousel {
+  margin-top: 50px;
+}
+
 .carousel-hover:hover .infos-container{
   display: block;
+  cursor: pointer;
 
 }
 .carousel-hover:hover{
   transform: scale(1.1);
   z-index: 10;
+  cursor: pointer;
+  position: relative;
+  top: 18px;
+
+
 
 }
 
@@ -168,4 +175,7 @@ body {
 
 .info-row2 span {
   padding-inline: 4px;
+}
+.carousel-item:hover {
+  cursor: pointer;
 }
