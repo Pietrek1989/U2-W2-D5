@@ -1,6 +1,6 @@
 body {
     background-color: #141414;
-    font-family: NetflixSans;
+    font-family: "NetflixSans";
     animation: fadein 1.5s;
     animation-fill-mode: both;
     box-sizing: border-box;
@@ -8,11 +8,11 @@ body {
   }
 
   h1 , h2 , h3 , h4 , h5 , h6 {
-    font-family: inherit;
+    font-family: NetflixSans;
   }
   @font-face {
     font-family: "NetflixSans";
-    src: url(/fonts/NetflixSans-Regular.otf);
+    src: url(fonts/NetflixSans-Regular.otf);
   }
   
   @keyframes fadein {
@@ -22,6 +22,9 @@ body {
     100% {
       opacity: 1;
     }
+  }
+  button {
+    border-radius: 0;
   }
   
   h3 {
@@ -104,7 +107,6 @@ body {
     font-size: 1.5rem;
   }
   .no-wrap{
-    overflow-wrap: normal;
     flex-wrap: nowrap;
 }
 
@@ -127,12 +129,23 @@ body {
 }
 
 .carousel-hover:hover .infos-container{
+  width: 100%;
+  position: absolute;
   display: block;
   cursor: pointer;
+  background-color: #141414;
+  z-index: 11;
+}
 
+.carousel-inner {
+  position: static;
+  overflow: initial;
+}
+#myCarousel {
+  position: relative;
 }
 .carousel-hover:hover{
-  transform: scale(1.1);
+  transform: scale(1.3);
   z-index: 10;
   cursor: pointer;
   position: relative;
@@ -178,4 +191,54 @@ body {
 }
 .carousel-item:hover {
   cursor: pointer;
+}
+
+#user-window .h1 {
+  border-bottom: solid 1px rgb(255 255 255 / 22%);
+}
+
+.user-wrapper img {
+  width: 100%;
+}
+
+.input-group .input-group-prepend button {
+  background-color: black;
+  border: solid 1px white;
+  color: white;
+}
+
+#user-window  .container {
+  max-width: 40vw;
+  color: #bec0c2;
+}
+#user-window button {
+  padding: 0.5rem 1em;
+  margin-right: 0.5rem;
+}
+#user-window .btn-light {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.421);
+  border: solid 1px rgba(255, 255, 255, 0.421);
+}
+
+#user-window div:last-child .btn-light:first-child {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.user-body {
+  height: 100vh;
+}
+.form-check-input:checked {
+  background-color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  #user-window  .container {
+    max-width: 80vw;
+  }
+} 
+h1 {
+  color: white;
 }
