@@ -8,7 +8,7 @@ body {
   }
 
   h1 , h2 , h3 , h4 , h5 , h6 {
-    font-family: NetflixSans;
+    font-family: "NetflixSans";
   }
   @font-face {
     font-family: "NetflixSans";
@@ -31,7 +31,7 @@ body {
     color: white;
   }
   .navbar {
-    background-color: #141414
+    background-color: #141414;
 
   }
   
@@ -110,7 +110,6 @@ body {
     flex-wrap: nowrap;
 }
 
-
 .info-row2 span {
   padding-inline: 5px;
 }
@@ -155,6 +154,7 @@ body {
 
 }
 
+/* User */
 
 
 .circle {
@@ -241,4 +241,72 @@ body {
 } 
 h1 {
   color: white;
+}
+.last-row {
+  margin-left: 0!important;
+}
+
+/* Setting */
+
+#settings-body {
+  background-color: #F3F3F3;
+  max-height: 100vh;
+  font-size: 0.9rem;
+  
+}
+
+#settings .container {
+  padding-top: 1em;
+  width: 60vw;
+
+  color: black;
+}
+@media (max-width: 1100px) {
+  #settings  .container {
+    width: 90vw;
+  }
+  .d-flex { 
+    flex-direction: column;
+  }
+  #settings-body {
+    font-size: 0.7rem
+  }
+  #settings h5 {
+    font-size: 0.8rem;
+  }
+} 
+
+@media (max-width: 768px) {
+
+  #settings-body {
+    font-size: 0.5rem
+  }
+  #settings h5 {
+    font-size: 0.6rem;
+  }
+}
+
+#settings p {
+  margin-bottom: 0.3rem;
+}
+#settings h3,h4,h5,h6 {
+  font-size: 1rem;
+  color: rgba(121, 116, 116, 0.851);;
+}
+#settings button {
+  background-color: #d0cccca3;
+  border: none;
+  padding-block: 5px;
+  width: 70%;
+}
+#settings hr {
+  margin: 0.5rem;
+}
+.flex-rows {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+.bi-paypal {
+  color: black;
 }
